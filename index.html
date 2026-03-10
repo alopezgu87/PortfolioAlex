@@ -623,7 +623,7 @@
               <div class="project__thumb project__thumb--full">
                 <img
                   class="project__thumb-img project__thumb-img--tall"
-                  src="assets/FotoRadio.jpeg"
+                  src="assets/FotoSele.png"
                   alt="Miniatura del logo Ecos"
                   loading="lazy"
                 />
@@ -888,14 +888,14 @@
             </article>
       
             <article class="reference-card reveal"
-              onclick="openRefModal('Beni Rubido', 'Director Deportivo At. Madrid Femenino', 'Álex es generoso en su conocimiento, te impulsa como compañero y tiene un alto nivel de exigencia hacia sí mismo y su entorno', 'assets/BeniRubido.jpg')">
+              onclick="openRefModal('Beni Rubido', 'Director Deportivo · At. Madrid Femenino', 'Álex es generoso en su conocimiento, te impulsa como compañero y tiene un alto nivel de exigencia hacia sí mismo y su entorno.', 'assets/BeniRubido.jpg')">
               <div class="reference__info">
                 <div class="reference__photo">
                   <img src="assets/BeniRubido.jpg" alt="Beni Rubido">
                 </div>
                 <div>
                   <h3 class="reference__name">Beni Rubido</h3>
-                  <span class="reference__job">Director Deportivo At. Madrid Femenino</span>
+                  <span class="reference__job">Director Deportivo · At. Madrid Femenino</span>
                 </div>
               </div>
               <blockquote class="reference__quote">
@@ -952,18 +952,18 @@
             </article>
       
             <article class="reference-card reveal"
-              onclick="openRefModal('Fran Pastor', 'Responsable captación · AD Alcorcón', 'Álex tiene una capacidad innata para detectar talento y potenciarlo mediante tareas diseñadas específicamente para el contexto del jugador.', 'assets/FranPastor.jpeg')">
+              onclick="openRefModal('Fran Pastor', 'Ex jugador · Real Madrid <br> Responsable captación · AD Alcorcón', 'Álex destaca por su arraigo a la filosofía del club, construyendo un modelo de juego que refleja esa identidad. Es un entrenador que pone un énfasis especial en la calidad de los entrenamientos diarios, asegurando un progreso constante. Le gusta rodearse de grandes profesionales, buscando siempre aprender. Toma referencias del primer equipo y del club, lo que enriquece su perspectiva. Colabora en la captación de jugadores y tiene un buen ojo para detectar talento joven.<br>En resumen, Álex López es un técnico que no solo trabaja en el campo, sino que crea cultura de club y proyecta un futuro prometedor.', 'assets/FranPastor.jpeg')">
               <div class="reference__info">
                 <div class="reference__photo">
                   <img src="assets/FranPastor.jpeg" alt="Fran Pastor">
                 </div>
                 <div>
                   <h3 class="reference__name">Fran Pastor</h3>
-                  <span class="reference__job">Responsable captación · AD Alcorcón</span>
+                  <span class="reference__job">Ex-jugador · Real Madrid <br> Responsable captación · AD Alcorcón</span>
                 </div>
               </div>
               <blockquote class="reference__quote">
-                "Álex tiene una capacidad innata para detectar talento y potenciarlo..."
+                "Álex destaca por su arraigo a la filosofía del club, construyendo un modelo de juego que refleja esa identidad. Es un entrenador que pone un énfasis especial en la calidad de los entrenamientos diarios..."
               </blockquote>
             </article>
                   <article class="reference-card reveal"
@@ -1424,8 +1424,8 @@
         
         // Asignar los textos
         document.getElementById('modalRefName').textContent = name;
-        document.getElementById('modalRefJob').textContent = job;
-        document.getElementById('modalRefQuote').textContent = quote;
+        document.getElementById('modalRefJob').innerHTML = job;
+        document.getElementById('modalRefQuote').innerHTML = quote;
 
         // Inyectar la foto como fondo del contenedor
         card.style.backgroundImage = `url('${imgSrc}')`;
