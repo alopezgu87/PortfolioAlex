@@ -453,7 +453,7 @@
                     <ul class="resume__bullets">
                       <li>Impartiendo distintas áreas para UEFA A y B</li>
                       <li>Realización de visitas ABR a alumnos</li>
-                      <li>turorizando distintos UEFA C</li>
+                      <li>Tutorizando distintos UEFA C</li>
                     </ul>
                   </div>
                 </article>
@@ -1112,52 +1112,6 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // INICIO EFECTO ESCRITURA
-      const roles = [
-  "Desarrollo de talento",
-  "Dirección de equipos",
-  "Planificación táctica",
-  "Formación UEFA"
-];
-      const typingEl = document.getElementById("typing");
-
-      let roleIndex = 0;
-      let charIndex = 0;
-      let deleting = false;
-
-      const SPEED_TYPE = 110;
-      const SPEED_DELETE = 70;
-      const PAUSE_END = 1500;
-      const PAUSE_SWITCH = 450;
-
-      function tick() {
-        const current = roles[roleIndex];
-
-        if (!deleting) {
-          charIndex++;
-          typingEl.textContent = current.slice(0, charIndex);
-
-          if (charIndex === current.length) {
-            deleting = true;
-            setTimeout(tick, PAUSE_END);
-            return;
-          }
-          setTimeout(tick, SPEED_TYPE);
-        } else {
-          charIndex--;
-          typingEl.textContent = current.slice(0, charIndex);
-
-          if (charIndex === 0) {
-            deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(tick, PAUSE_SWITCH);
-            return;
-          }
-          setTimeout(tick, SPEED_DELETE);
-        }
-      }
-      // FIN EFECTO ESCRITURA
-
       // INICIO CALCULADORA DE EXPERIENCIA
       const START_DATE = "2005-09-15";
 
@@ -1221,7 +1175,6 @@
         counterObserver.observe(counter);
       });
 
-      tick();
       // FIN CALCULADORA DE EXPERIENCIA
 
       // INICIO PROJECT FILTERS
@@ -1401,7 +1354,7 @@
       // INICIO CONTACT FORM
       (function() {
         emailjs.init({
-          publicKey: "0-FQYHxVK2jjYF1ZoQB",
+          publicKey: "FQYHxVK2jjYF1ZoQB",
         });
       })();
 
