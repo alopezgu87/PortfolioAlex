@@ -1226,6 +1226,21 @@ a:hover {
 
 .ref-cromo-quote-wrap {
   position: relative;
+  max-height: 180px; /* Altura máxima para que no crezca infinito en móvil */
+  overflow-y: auto;  /* Habilita scroll vertical si el texto es largo */
+  padding-right: 8px; /* Espacio para la barra de scroll */
+}
+.ref-cromo-quote-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ref-cromo-quote-wrap::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ref-cromo-quote-wrap::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
 }
 
 .ref-cromo-quote-wrap i {
@@ -1619,6 +1634,18 @@ textarea:focus {
   .projects__filter {
     font-size: 14px;
     padding: 8px 12px;
+  }
+  .ref-cromo-container {
+    width: 95%; /* Un poco más ancho en móvil para ganar espacio horizontal */
+  }
+
+  .ref-cromo-card {
+    aspect-ratio: auto; /* Dejamos que el alto se adapte un poco más */
+    min-height: 500px;  /* Pero ponemos un mínimo para mantener la forma de cromo */
+  }
+
+  .ref-cromo-quote-wrap {
+    max-height: 150px; /* Un poco más pequeño en móviles muy compactos */
   }
 }
  
